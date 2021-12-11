@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VisualizePollController">
+   <top>
+      <ChoiceBox fx:id="pollChoiceBox" prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <PieChart fx:id="projectedSeatsChart" title="Projected Seats" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <PieChart fx:id="projectedPercentOfVotesChart" title="Projected Percent of Votes" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
