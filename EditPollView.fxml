@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditPollController">
+   <center>
+      <VBox prefHeight="445.0" prefWidth="432.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textfieldPollName" />
+                  <Button fx:id="updatePollNameButton" mnemonicParsing="false" onAction="#updatePollNameButtonClicked" prefHeight="31.0" prefWidth="270.0" text="Update Poll Name" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Party to Update:         " />
+                  <ChoiceBox fx:id="partyToUpdateChoiceBox" prefHeight="31.0" prefWidth="350.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Projected # of Seats: (Whole Number, 0-Total)  " />
+                  <TextArea fx:id="textfieldNumOfSeats" prefHeight="65.0" prefWidth="242.0" />
+                  <Label fx:id="totalNumberOfSeatsLabel" text="/290" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Projected % of Vote: (Whole Number, 0-100)    " />
+                  <TextArea fx:id="textfieldPercentageOfVote" prefHeight="65.0" prefWidth="242.0" />
+                  <Label text="\%" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonClicked" prefHeight="80.0" prefWidth="241.0" text="Clear" />
+                  <Button fx:id="updatePartyButton" mnemonicParsing="false" onAction="#updatePartyButtonClicked" prefHeight="81.0" prefWidth="251.0" text="Update Party" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="68.0" prefWidth="464.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Poll to Edit: " />
+            <ChoiceBox fx:id="pollEditBox" prefHeight="32.0" prefWidth="386.0" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
